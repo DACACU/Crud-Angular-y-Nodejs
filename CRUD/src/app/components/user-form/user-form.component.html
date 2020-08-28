@@ -1,0 +1,33 @@
+<div class="col-md-4 offset-md-2">
+  <form action="">
+    <div class="form-group">
+      <input type="text" name="first_name" [(ngModel)]="users.Nombre" placeholder="Ingrese los nombres" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="text" name="last_name" [(ngModel)]="users.Apellido" placeholder="Ingrese los Apellidos" class="form-control" >
+    </div>
+    <div class="form-group">
+      <input type="number" name="phone" [(ngModel)]="users.Telefono" placeholder="Ingrese el numero de telefono" class="form-control" >
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" [(ngModel)]="users.Email" placeholder="Ingrese la direccion de correo electronico" class="form-control" >
+    </div>
+    <div class="form-group">
+      <input type="text" name="address" [(ngModel)]="users.Direccion" placeholder="Ingrese la direccion de su casa" class="form-control" >
+    </div>
+    <button class="btn btn-success btn-block" (click)="edit ? updateUser() : saveNewUser()">
+      Guardar
+    </button>
+
+  </form>
+</div>
+
+<div class="col-md-4">
+
+  <h3>{{users.Nombre == '' ? 'Nombres' : users.Nombre}}</h3>
+  <h3>{{users.Apellido == '' ? 'Apellidos' : users.Apellido}}</h3>
+  <h3>{{users.Telefono == '' ? 'Telefono' : users.Telefono}}</h3>
+  <h3>{{users.Email == '' ? 'Email' : users.Email}}</h3>
+  <h3>{{users.Direccion == '' ? 'Direccion' : users.Direccion}}</h3>
+
+</div>
